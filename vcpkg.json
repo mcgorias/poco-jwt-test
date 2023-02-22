@@ -1,0 +1,11 @@
+{
+    "name": "poco-jwt-test",
+    "version-string": "latest",
+    "dependencies": [
+      "poco",
+      {
+          "name": "poco",
+          "features":["netssl"]
+      }
+    ]
+  }
