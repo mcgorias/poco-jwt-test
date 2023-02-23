@@ -1,0 +1,27 @@
+diff --git a/ports/poco/portfile.cmake b/ports/poco/portfile.cmake
+index c9e079bb5..7124bfdca 100644
+--- a/ports/poco/portfile.cmake
++++ b/ports/poco/portfile.cmake
+@@ -34,7 +34,7 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+ )
+ 
+ if("netssl" IN_LIST FEATURES)
+-    if(VCPKG_TARGET_IS_WINDOWS)
++    if(VCPKG_TARGET_IS_WINDOWS AND FALSE)
+         list(APPEND FEATURE_OPTIONS
+             -DENABLE_NETSSL_WIN=ON
+             -DENABLE_NETSSL=OFF
+diff --git a/ports/poco/vcpkg.json b/ports/poco/vcpkg.json
+index a4f1e2fa8..c72f1c9dc 100644
+--- a/ports/poco/vcpkg.json
++++ b/ports/poco/vcpkg.json
+@@ -36,8 +36,7 @@
+       "description": "NetSSL support for POCO",
+       "dependencies": [
+         {
+-          "name": "openssl",
+-          "platform": "!windows"
++          "name": "openssl"
+         }
+       ]
+     },
